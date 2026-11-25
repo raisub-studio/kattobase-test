@@ -734,6 +734,17 @@ body{background:#fff}
 /* STEP 0: transport section headings */
 #city .transport-pill{display:table;width:auto;max-width:100%;box-sizing:border-box;margin:1.4rem 0 .75rem;padding:0;background:transparent;color:#ff0000;text-align:left;font-size:clamp(1.15rem,3vw,1.7rem);font-weight:800;line-height:1.3}
 #city .transport-pill::before{content:"";display:inline-block;width:.65em;height:.1em;background:var(--navy);vertical-align:middle;margin-right:.3em;position:relative;top:-.08em}
+
+/* Hero: choose guide entry by visitor's current situation */
+.hero-stage-nav{margin:0 auto 1.45rem;max-width:920px}
+.hero-stage-heading{margin:0 0 .65rem;text-align:center;font-size:1.06rem;font-weight:850;color:var(--navy)}
+.hero-stage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.hero-stage-card{display:flex;flex-direction:column;justify-content:center;gap:.35rem;min-height:96px;padding:.85rem 1rem;border:1px solid #ced9e2;border-radius:12px;background:#fff;color:var(--navy);text-decoration:none;box-shadow:0 3px 10px rgba(16,42,67,.05);transition:border-color .15s ease,background-color .15s ease,transform .15s ease}
+.hero-stage-card:hover{border-color:var(--red);background:#fff8f8;transform:translateY(-2px)}
+.hero-stage-card:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.hero-stage-card-title{display:block;font-size:1rem;font-weight:850;line-height:1.4}
+.hero-stage-card-dest{display:block;font-size:.78rem;font-weight:650;line-height:1.5;color:var(--muted)}
+@media(max-width:680px){.hero-stage-grid{grid-template-columns:1fr;gap:.55rem}.hero-stage-card{min-height:0;padding:.75rem 1rem}.hero-stage-heading{font-size:1rem}}
 </style>
 </head>
 <body>
@@ -779,6 +790,14 @@ body{background:#fff}
   <p>廣島是一座位於日本西部的城市。這裡以世界遺產嚴島神社和廣島燒聞名，同時也是一座熱情支持在地棒球隊「<span class="carp-accent">廣島東洋鯉魚隊</span>」的城市。</p>
   <p>本網站為首次到廣島觀看棒球比賽的旅客整理所需資訊。</p>
   <a class="hero-guide-link" href="#guide"><span class="hero-guide-arrow" aria-hidden="true">↓</span><span>前往觀賽指南</span></a>
+  <nav class="hero-stage-nav" aria-label="依照目前的旅遊階段跳至對應指南">
+    <h3 class="hero-stage-heading">你現在在哪個階段？</h3>
+    <div class="hero-stage-grid">
+      <a class="hero-stage-card" href="#city"><span class="hero-stage-card-title">還沒到廣島</span><span class="hero-stage-card-dest">前往廣島的交通方式 · STEP 0</span></a>
+      <a class="hero-stage-card" href="#access"><span class="hero-stage-card-title">已經抵達廣島</span><span class="hero-stage-card-dest">前往球場的交通方式 · STEP 3</span></a>
+      <a class="hero-stage-card" href="#goods"><span class="hero-stage-card-title">已經進入球場</span><span class="hero-stage-card-dest">球場周邊商品介紹 · STEP 8</span></a>
+    </div>
+  </nav>
   <div class="notice hero-important"><strong>IMPORTANT</strong><p>本網站是由個人製作的非官方指南。門票資訊、開門時間、活動及相關規定可能有所變更。觀賽當天請務必確認官方最新資訊。</p></div>
 </div></section>
 <div class="quick"><a href="https://www.ticket.carp.co.jp/calendar/" target="_blank" rel="noopener">公式日程を見る ↗</a><a href="https://www.carp.co.jp/ticket/" target="_blank" rel="noopener">公式チケット情報 ↗</a><a href="https://www.carp.co.jp/" target="_blank" rel="noopener">公式お知らせ ↗</a><a href="https://www.google.com/maps/search/?api=1&query=MAZDA%20Zoom-Zoom%20Stadium%20Hiroshima" target="_blank" rel="noopener">Google Maps ↗</a></div>
