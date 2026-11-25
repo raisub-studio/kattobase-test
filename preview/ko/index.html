@@ -734,6 +734,17 @@ body{background:#fff}
 /* STEP 0: transport section headings */
 #city .transport-pill{display:table;width:auto;max-width:100%;box-sizing:border-box;margin:1.4rem 0 .75rem;padding:0;background:transparent;color:#ff0000;text-align:left;font-size:clamp(1.15rem,3vw,1.7rem);font-weight:800;line-height:1.3}
 #city .transport-pill::before{content:"";display:inline-block;width:.65em;height:.1em;background:var(--navy);vertical-align:middle;margin-right:.3em;position:relative;top:-.08em}
+
+/* Hero: choose guide entry by visitor's current situation */
+.hero-stage-nav{margin:0 auto 1.45rem;max-width:920px}
+.hero-stage-heading{margin:0 0 .65rem;text-align:center;font-size:1.06rem;font-weight:850;color:var(--navy)}
+.hero-stage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.hero-stage-card{display:flex;flex-direction:column;justify-content:center;gap:.35rem;min-height:96px;padding:.85rem 1rem;border:1px solid #ced9e2;border-radius:12px;background:#fff;color:var(--navy);text-decoration:none;box-shadow:0 3px 10px rgba(16,42,67,.05);transition:border-color .15s ease,background-color .15s ease,transform .15s ease}
+.hero-stage-card:hover{border-color:var(--red);background:#fff8f8;transform:translateY(-2px)}
+.hero-stage-card:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.hero-stage-card-title{display:block;font-size:1rem;font-weight:850;line-height:1.4}
+.hero-stage-card-dest{display:block;font-size:.78rem;font-weight:650;line-height:1.5;color:var(--muted)}
+@media(max-width:680px){.hero-stage-grid{grid-template-columns:1fr;gap:.55rem}.hero-stage-card{min-height:0;padding:.75rem 1rem}.hero-stage-heading{font-size:1rem}}
 </style>
 </head>
 <body>
@@ -779,6 +790,14 @@ body{background:#fff}
   <p>히로시마는 일본 서부에 위치한 도시입니다. 세계유산 이쓰쿠시마 신사와 히로시마식 오코노미야키로 유명하며, 지역 야구팀인 ‘<span class="carp-accent">히로시마 도요 카프</span>’를 열정적으로 응원하는 도시이기도 합니다.</p>
   <p>이 사이트는 히로시마에서 처음 야구 경기를 관람하는 여행자에게 필요한 정보를 안내합니다.</p>
   <a class="hero-guide-link" href="#guide"><span class="hero-guide-arrow" aria-hidden="true">↓</span><span>야구 관람 가이드로 이동</span></a>
+  <nav class="hero-stage-nav" aria-label="현재 상황에 맞는 관람 가이드로 이동">
+    <h3 class="hero-stage-heading">지금 어느 단계인가요?</h3>
+    <div class="hero-stage-grid">
+      <a class="hero-stage-card" href="#city"><span class="hero-stage-card-title">아직 히로시마에 없어요</span><span class="hero-stage-card-dest">히로시마 가는 방법 · STEP 0</span></a>
+      <a class="hero-stage-card" href="#access"><span class="hero-stage-card-title">히로시마에 도착했어요</span><span class="hero-stage-card-dest">야구장 가는 방법 · STEP 3</span></a>
+      <a class="hero-stage-card" href="#goods"><span class="hero-stage-card-title">야구장에 입장했어요</span><span class="hero-stage-card-dest">구장 굿즈 안내 · STEP 8</span></a>
+    </div>
+  </nav>
   <div class="notice hero-important"><strong>IMPORTANT</strong><p>이 사이트는 개인이 제작한 비공식 가이드입니다. 티켓 정보, 개장 시간, 이벤트 및 규정은 변경될 수 있습니다. 방문 당일에는 반드시 공식 정보도 확인해 주세요.</p></div>
 </div></section>
 <div class="quick"><a href="https://www.ticket.carp.co.jp/calendar/" target="_blank" rel="noopener">公式日程を見る ↗</a><a href="https://www.carp.co.jp/ticket/" target="_blank" rel="noopener">公式チケット情報 ↗</a><a href="https://www.carp.co.jp/" target="_blank" rel="noopener">公式お知らせ ↗</a><a href="https://www.google.com/maps/search/?api=1&query=MAZDA%20Zoom-Zoom%20Stadium%20Hiroshima" target="_blank" rel="noopener">Google Maps ↗</a></div>
